@@ -63,4 +63,11 @@ public class WebPiaoController {
 		}
 		return "{\"message\":\"fail\"}";
 	}
+	
+
+	@RequestMapping("test")
+	public String test(HttpServletRequest request){
+		logger.info("request!time:"+new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
+		return "test";
+	}
 }
